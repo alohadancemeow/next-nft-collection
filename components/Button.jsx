@@ -4,11 +4,11 @@ import styled from 'styled-components'
 
 const Button = ({ text, link }) => {
     return (
-        <MyButton>
-            <Link href={link}>
-                <a >{text}</a>
-            </Link>
-        </MyButton>
+        <Link href={link}>
+            <a>
+                <MyButton>{text}</MyButton>
+            </a>
+        </Link>
     )
 }
 
