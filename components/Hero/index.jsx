@@ -7,6 +7,9 @@ import {
   Section,
   Container,
   Box,
+  Round,
+  ImageBox,
+  Circle
 } from './styles'
 
 const HomeSection = () => {
@@ -20,6 +23,16 @@ const HomeSection = () => {
         <Box>
           <CoverVideo />
         </Box>
+
+        <Round>
+          <Circle>&#x2193;</Circle>
+          <ImageBox
+            src='/Rounded-Text-Black.png'
+            alt='image'
+            preview={false}
+          />
+        </Round>
+
       </Container>
     </Section>
   )

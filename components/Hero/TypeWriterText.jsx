@@ -5,9 +5,9 @@ import Button from '../Button'
 
 const TypeWriterText = () => {
     return (
-        <>
+        <div>
+            <Header>Discover a new ara of cool</Header>
             <Title>
-                <Header>Discover a new ara of cool</Header>
                 <Typewriter
                     onInit={(typewriter) => {
                         typewriter
@@ -33,7 +33,7 @@ const TypeWriterText = () => {
             <ButtonWrapper>
                 <Button text='Explore' link='#about' />
             </ButtonWrapper>
-        </>
+        </div>
     )
 }
 
@@ -67,8 +67,10 @@ const Title = styled.h2`
 
 const Header = styled.h2`
     letter-spacing: 5px;
-    font-size: ${({ theme }) => theme.fonts.sm};
+    line-height: 45px;
+    font-size: ${({ theme }) => theme.fonts.xxl};
     font-weight: 600;
+    text-transform: uppercase;
 `
 
 const Subtitle = styled.h3`
