@@ -59,6 +59,7 @@ const GlobalStyle = createGlobalStyle`
 `
 
 // set theme
+// --> LightMode
 const theme = {
   colors: {
     primary: '#058335', //green
@@ -70,6 +71,40 @@ const theme = {
     text: '#202020',
     bodyRgba: '255, 255, 255',
     textRgba: '32, 32, 32',
+    carouselColor: '#EEEDDE'
+  },
+  breakpoints: {
+    mobile: '576px',
+    tablet: '820px',
+    notebook: '1080px',
+
+    // xs: '480px',
+    // sm: '576px',
+    // md: '768px',
+    // lg: '992px',
+    // xl: '1200px',
+    // xxl: '1600px',
+  },
+  fonts: {
+    xs: '0.75em',
+    sm: '0.875em',
+    md: '1em',  //1em = 16px
+    lg: '1.25em',
+    xl: '2em',
+    xxl: '3em',
+    xxxl: '4em',
+    buttonFont: '0.875em'
+  },
+  navHeight: '5rem',
+}
+
+// --> DarkMode
+export const darkMode = {
+  textColors: {
+    body: '#202020',
+    text: '#fff',
+    bodyRgba: '32, 32, 32 ',
+    textRgba: '255, 255, 255',
     carouselColor: '#EEEDDE'
   },
   breakpoints: {

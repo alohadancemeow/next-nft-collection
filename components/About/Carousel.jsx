@@ -56,8 +56,8 @@ export default Carousel
 
 // styles here.
 const Container = styled.div`
-    width: 30vw;
-    height: 50vh;
+    width: 25vw;
+    height: 65vh;
 
     .swiper {
         width: 100%;
