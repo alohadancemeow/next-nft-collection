@@ -1,8 +1,21 @@
 import React from 'react'
 
+import Carousel from './Carousel'
+
+import {
+  Section,
+  Container,
+  Box,
+} from './styles'
+
 const AboutSection = () => {
   return (
-    <div>AboutSection</div>
+    <Section>
+      <Container>
+        <Box><Carousel /></Box>
+        <Box>Text</Box>
+      </Container>
+    </Section>
   )
 }
 
