@@ -38,13 +38,23 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     box-sizing: border-box;
-    font-family: 'Fredoka', sans-serif;
+    font-family: 'Sora', sans-serif;
     position: relative;
     font-size: 16px;
     line-height: 28px;
     font-weight: 400;
     min-height: 100%;
     background-color: #fff;
+    overflow-x: hidden;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      color: inherit;
+    }
   }
 `
 
@@ -56,11 +66,11 @@ const theme = {
     accent: '#588ef3' //blue
   },
   textColors: {
-    primary: '#fff',
-    secondary: 'gray',
-    warnning: 'orange',
-    error: '#f35858',
-    success: '#52c41a' // strong green
+    body: '#fff',
+    text: '#202020',
+    bodyRgba: '255, 255, 255',
+    textRgba: '32, 32, 32',
+    carouselColor: '#EEEDDE'
   },
   breakpoints: {
     mobile: '576px',
@@ -73,7 +83,18 @@ const theme = {
     // lg: '992px',
     // xl: '1200px',
     // xxl: '1600px',
-  }
+  },
+  fonts: {
+    xs: '0.75em',
+    sm: '0.875em',
+    md: '1em',  //1em = 16px
+    lg: '1.25em',
+    xl: '2em',
+    xxl: '3em',
+    xxxl: '4em',
+    buttonFont: '0.875em'
+  },
+  navHeight: '5rem',
 }
 
 function MyApp({ Component, pageProps }) {

@@ -26,10 +26,8 @@ const Layout = ({ children, title = 'next-nft-collection' }) => {
             </Head>
 
             <main>
-                {/* <Nav /> */}
                 {children}
             </main>
-            {/* <Footer /> */}
         </>
     )
 }
