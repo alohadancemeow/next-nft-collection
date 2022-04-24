@@ -1,8 +1,24 @@
 import React from 'react'
+import DrawSvg from './DrawSvg'
+
+import {
+  Section,
+  Title,
+  Container,
+  SvgContainer,
+} from './styles'
 
 const RoadmapSection = () => {
   return (
-    <div>RoadmapSection</div>
+    <Section>
+      <Title>Roadmap</Title>
+
+      <Container>
+        <SvgContainer>
+          <DrawSvg />
+        </SvgContainer>
+      </Container>
+    </Section>
   )
 }
 
