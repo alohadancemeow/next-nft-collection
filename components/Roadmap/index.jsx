@@ -1,6 +1,10 @@
 import React, { useRef, useLayoutEffect } from 'react'
 import DrawSvg from './DrawSvg'
 
+import { Card } from 'antd';
+
+const { Meta } = Card;
+
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 
@@ -14,18 +18,30 @@ import {
   ItemContainer,
   Box,
   Subtitle,
-  Text
+  Text,
+  ImageBox,
+  CardWrapper
 } from './styles'
 
 // item's card
-const RoadmapItems = ({ title, subtext, addToRef }) => (
+const RoadmapItems = ({ title, subtext, addToRef, image }) => (
   <Item ref={addToRef}>
-    <ItemContainer>
-      <Box>
-        <Subtitle>{title}</Subtitle>
-        <Text>{subtext}</Text>
-      </Box>
-    </ItemContainer>
+    <CardWrapper>
+      <Card
+        hoverable
+        // style={{ width: 500, height: 250 }}
+        cover={
+          <ImageBox
+            preview={false}
+            alt={title}
+            src={image}
+          />
+        }
+      >
+        <Meta title={title} description={subtext} />
+      </Card>
+    </CardWrapper>
+   
   </Item>
 )
 
@@ -54,7 +70,7 @@ const RoadmapSection = () => {
       timeline.fromTo(el.childNodes[0],
         { y: '0' },
         {
-          y: '-30%',
+          y: '-65%',
           scrollTrigger: {
             id: `section-${index + 1}`,
             trigger: el,
@@ -82,11 +98,11 @@ const RoadmapSection = () => {
         </SvgContainer>
         <Items>
           <Item>&nbsp;</Item>
-          <RoadmapItems addToRef={addToRef} title='this is title1' subtext='this is subtle' />
-          <RoadmapItems addToRef={addToRef} title='this is title2' subtext='this is subtle' />
-          <RoadmapItems addToRef={addToRef} title='this is title3' subtext='this is subtle' />
-          <RoadmapItems addToRef={addToRef} title='this is title4' subtext='this is subtle' />
-          <RoadmapItems addToRef={addToRef} title='this is title5' subtext='this is subtle' />
+          <RoadmapItems addToRef={addToRef} title='this is title 01' subtext='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, laborum?' image='/images/image1.svg' />
+          <RoadmapItems addToRef={addToRef} title='this is title 02' subtext='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, laborum?' image='/images/image2.svg' />
+          <RoadmapItems addToRef={addToRef} title='this is title 03' subtext='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, laborum?' image='/images/image3.svg' />
+          <RoadmapItems addToRef={addToRef} title='this is title 04' subtext='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, laborum?' image='/images/image4.svg' />
+          <RoadmapItems addToRef={addToRef} title='this is title 05' subtext='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, laborum?' image='/images/image5.svg' />
         </Items>
       </Container>
     </Section>
