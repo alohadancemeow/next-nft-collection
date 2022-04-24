@@ -37,3 +37,60 @@ export const SvgContainer = styled.div`
     justify-content: center;
     align-items: center;
 `
+
+export const Items = styled.ul`
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    /* background-color: aliceblue; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &>*:nth-of-type(2n +1) {
+        justify-content: start;
+    }
+    &>*:nth-of-type(2n) {
+        justify-content: end;
+    }
+`
+
+export const Item = styled.li`
+    width: 100%;
+    height: 100%;
+    display: flex;
+`
+
+export const ItemContainer = styled.div`
+    width: 40%;
+    height: fit-content;
+    padding: 1rem;
+    border: 3px solid ${({ theme }) => theme.textColors.text};
+`
+
+export const Box = styled.p`
+    height: fit-content;
+    padding: 1rem;
+    position: relative;
+    color: ${({ theme }) => theme.textColors.text};
+    background-color: ${({ theme }) => theme.textColors.carouselColor};
+    border: 1px solid ${({ theme }) => theme.textColors.text};
+`
+
+export const Subtitle = styled.span`
+    display: block;
+    font-size: ${({ theme }) => theme.fonts.xl};
+    text-transform: capitalize;
+    color: ${({ theme }) => theme.textColors.text};
+`
+
+export const Text = styled.span`
+    display: block;
+    margin: 0.5rem 0;
+    font-size: ${({ theme }) => theme.fonts.sm};
+    text-transform: capitalize;
+    color: ${({ theme }) => theme.textColors.text};
+    font-weight: 400;
+`
