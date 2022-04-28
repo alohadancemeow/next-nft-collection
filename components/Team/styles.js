@@ -4,6 +4,7 @@ export const Section = styled.section`
     min-height: 100vh;
     width: 100vw;
     background-color: ${({ theme }) => theme.textColors.body};
+    position: relative;
 `
 
 export const Title = styled.h1`
@@ -30,10 +31,8 @@ export const Container = styled.div`
 `
 
 export const ImgContainer = styled.div`
-    width: 15rem;
+    width: 100%;
     margin: 0 auto;
-    /* background-color: ${({ theme }) => theme.textColors.carouselColor}; */
-    /* border-radius: 20px; */
     cursor: pointer;
     
     &.ant-image-img {    
@@ -49,6 +48,8 @@ export const Item = styled.div`
     color: ${({ theme }) => theme.textColors.body};
     margin: 2rem 1rem;
     position: relative;
+    backdrop-filter: blur(4px);
+    z-index: 5;
 
     &:hover {
         img {

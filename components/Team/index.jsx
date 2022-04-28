@@ -10,6 +10,7 @@ import {
   ImgContainer,
   Item
 } from './styles'
+import ConfettiBox from './Confetti'
 
 import { ImageData } from '../Data'
 
@@ -40,6 +41,7 @@ const Member = ({ img, name, position }) => (
 const TeamSection = () => {
   return (
     <Section>
+      <ConfettiBox />
       <Title>Team</Title>
       <Container>
         {ImageData.map(item => (
