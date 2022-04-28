@@ -14,7 +14,7 @@ import "swiper/css/navigation";
 // import required modules
 import { EffectCards, Pagination, Navigation, Autoplay } from "swiper";
 
-import { ImageData } from './Data'
+import { ImageData } from '../Data'
 
 
 const Carousel = () => {
