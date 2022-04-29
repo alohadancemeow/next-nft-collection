@@ -34,10 +34,10 @@ export default Banner
 // styles here.
 const Section = styled.section`
     width: 100vw;
-    height: 25rem;
+    height: 35rem;
     position: relative;
-    border-top: 2px solid ${({ theme }) => theme.textColors.text};
-    border-bottom: 2px solid ${({ theme }) => theme.textColors.text};
+    /* border-top: 2px solid ${({ theme }) => theme.textColors.text};
+    border-bottom: 2px solid ${({ theme }) => theme.textColors.text}; */
     background-color: ${({ theme }) => `rgba(${theme.textColors.textRgba}, 0.9)`};
     overflow: hidden;
 

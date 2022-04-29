@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ant-design/icons": "^4.7.0",
     "@react-hook/window-size": "^3.0.7",
     "antd": "^4.19.5",
     "gsap": "^3.10.4",
