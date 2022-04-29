@@ -13,6 +13,7 @@ const Banner = () => {
             <ImgContainer>
                 {ImageData.slice(0, 5).map(item => (
                     <Image
+                        key={item.id}
                         src={item.src}
                         alt={item.name}
                         preview={false}
