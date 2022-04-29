@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import styled, { keyframes } from 'styled-components'
 
 import gsap from "gsap";
@@ -15,7 +15,7 @@ const DrawSvg = () => {
     gsap.registerPlugin(ScrollTrigger)
 
     // layout effcet
-    useLayoutEffect(() => {
+    useEffect(() => {
 
         let element = ref.current
         let svg = document.getElementsByClassName('svg-path')[0]
