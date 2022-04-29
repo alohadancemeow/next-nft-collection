@@ -1,6 +1,8 @@
-import React from 'react'
-import { Collapse } from 'antd';
+import React, { useEffect, useRef } from 'react'
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 
+import { Collapse } from 'antd';
 const { Panel } = Collapse;
 
 import {
@@ -12,8 +14,30 @@ import {
 } from './styles'
 
 const FaqSection = () => {
+
+    const ref = useRef(null)
+
+    gsap.registerPlugin(ScrollTrigger)
+
+    useEffect(() => {
+        let element = ref.current
+        // console.log(element);
+
+        ScrollTrigger.create({
+            trigger: element,
+            start: 'top top',
+            end: 'bottom top',
+            pin: true,
+            pinSpacing: false,
+            scrub: true,
+            // markers: true
+        })
+
+        return () => ScrollTrigger.clearScrollMemory()
+    }, [])
+
     return (
-        <Section>
+        <Section ref={ref}>
             <Title>FAQ</Title>
             <Container>
                 <Box>

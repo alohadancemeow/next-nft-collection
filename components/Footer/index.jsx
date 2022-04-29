@@ -1,8 +1,12 @@
 import React from 'react'
 
+import {
+    Section,
+} from './styles'
+
 const Footer = () => {
     return (
-        <div>Footer</div>
+        <Section>Footer</Section>
     )
 }
 

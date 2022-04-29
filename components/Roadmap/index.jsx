@@ -1,4 +1,4 @@
-import React, { useRef, useLayoutEffect } from 'react'
+import React, { useRef, useEffect } from 'react'
 import DrawSvg from './DrawSvg'
 
 import { Card } from 'antd';
@@ -41,7 +41,7 @@ const RoadmapItems = ({ title, subtext, addToRef, image }) => (
         <Meta title={title} description={subtext} />
       </Card>
     </CardWrapper>
-   
+
   </Item>
 )
 
@@ -61,7 +61,7 @@ const RoadmapSection = () => {
   }
 
   // llayout effect
-  useLayoutEffect(() => {
+  useEffect(() => {
     // console.log(revealRef);
 
     let timeline = gsap.timeline()
