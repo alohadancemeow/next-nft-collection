@@ -2,11 +2,11 @@ import React from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
 
-const Button = ({ text, link }) => {
+const Button = ({ text, link, size }) => {
     return (
         <Link href={link}>
             <a>
-                <MyButton>{text}</MyButton>
+                <MyButton size={size}>{text}</MyButton>
             </a>
         </Link>
     )
@@ -18,8 +18,9 @@ const MyButton = styled.button`
     display: inline-block;
     background-color: ${({ theme }) => theme.textColors.text};
     color: ${({ theme }) => theme.textColors.body};
-    font-size: ${({ theme }) => theme.fonts.sm};
-    padding: 0.7rem 2.3rem;
+    font-size: ${({ theme, size }) => size == 'big' ? theme.fonts.lg : theme.fonts.sm};
+    font-weight: ${({ size }) => size == 'big' ? 600 : 400};
+    padding: ${({ size }) => size == 'big' ? '1.5rem 3rem' : '0.7rem 2.3rem'};
     outline: none;
     border: none;
     border-radius: 50px;

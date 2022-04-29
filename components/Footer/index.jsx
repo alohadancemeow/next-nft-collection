@@ -1,12 +1,15 @@
 import React from 'react'
 
+import Banner from './Banner'
 import {
     Section,
 } from './styles'
 
 const Footer = () => {
     return (
-        <Section>Footer</Section>
+        <Section>
+            <Banner />
+        </Section>
     )
 }
 

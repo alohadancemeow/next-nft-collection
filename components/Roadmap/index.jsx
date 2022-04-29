@@ -8,6 +8,8 @@ const { Meta } = Card;
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 
+import { ImageData } from '../Data';
+
 import {
   Section,
   Title,
@@ -98,11 +100,14 @@ const RoadmapSection = () => {
         </SvgContainer>
         <Items>
           <Item>&nbsp;</Item>
-          <RoadmapItems addToRef={addToRef} title='this is title 01' subtext='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, laborum?' image='/images/image1.svg' />
-          <RoadmapItems addToRef={addToRef} title='this is title 02' subtext='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, laborum?' image='/images/image2.svg' />
-          <RoadmapItems addToRef={addToRef} title='this is title 03' subtext='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, laborum?' image='/images/image3.svg' />
-          <RoadmapItems addToRef={addToRef} title='this is title 04' subtext='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, laborum?' image='/images/image4.svg' />
-          <RoadmapItems addToRef={addToRef} title='this is title 05' subtext='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, laborum?' image='/images/image5.svg' />
+          {ImageData.slice(0, 5).map(item => (
+            <RoadmapItems
+              image={item.src}
+              addToRef={addToRef}
+              title='this is title 01'
+              subtext='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, laborum?'
+            />
+          ))}
         </Items>
       </Container>
     </Section>

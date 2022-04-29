@@ -8,7 +8,7 @@ export const Section = styled.section`
     color: ${({ theme }) => theme.textColors.text};
 
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
     flex-direction: column;
 `
