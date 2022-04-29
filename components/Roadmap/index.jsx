@@ -102,7 +102,7 @@ const RoadmapSection = () => {
           <Item>&nbsp;</Item>
           {ImageData.slice(0, 5).map(item => (
             <RoadmapItems
-              kye={item.id}
+              key={item.id}
               image={item.src}
               addToRef={addToRef}
               title='this is title 01'
